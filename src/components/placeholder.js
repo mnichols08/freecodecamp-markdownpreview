@@ -51,7 +51,7 @@ My fav. | Meh. | Great Car as well
 * And last but not least, let's not forget embedded images:
 * Plus it's cool to watch the react logo spin like a dj spinning records.
 
-![React Logo](https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png)
+![React Logo](./logo512.png)
 
 This is all for now. Thanks again for checking this out!
 
