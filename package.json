@@ -5,14 +5,12 @@
   "dependencies": {
     "@skidding/react-codemirror": "^1.0.2",
     "create-react-class": "^15.6.3",
-    "font-awesome": "^4.7.0",
     "marked": "^0.7.0",
     "node-sass": "^4.12.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
-    "react-split-pane": "^0.1.87",
-    "sel": "^0.7.5"
+    "react-split-pane": "^0.1.87"
   },
   "scripts": {
     "start": "react-scripts start",

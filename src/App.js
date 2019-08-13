@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.scss';
-import SV from './components/StoreVariables';
 import SplitPane from 'react-split-pane';
 import createReactClass from 'create-react-class';
 import Preview from './components/Preview/Preview.component';
@@ -21,7 +20,6 @@ const App = createReactClass({
       markdown: e,
       lastClicked: '',
     });
-    SV.save('style', '');
   },
 
   handleChange(e) {
@@ -29,7 +27,6 @@ const App = createReactClass({
       markdown: e.target.value,
       lastClicked: '',
     });
-    SV.save('style', '');
   },
     
   render() {

@@ -6,7 +6,7 @@ const placeholder = `# Welcome to my Markdown Previewer!
 It can interpret text as **bold**... 
 Or _italic_.
 Or... even **_both!_**
-It can also ~~strikethrough~~.
+It can also ~~strike-through~~.
   
 It will create line breaks when you press enter.
 
@@ -24,6 +24,8 @@ const exampleFn = (fun, games) => {
 
 I really enjoyed making this project and I hope you enjoyed checking it out. There are still more features I want to add like a toolbar from [SimpleMDE](https://simplemde.com/), but I haven't gotten around to it just yet.
 
+If you are interested in the source code: [click here!](https://github.com/mnichols08/freecodecamp-markdownpreview)
+
 It will also interpret a few more things I am supposed to type about to pass the tests such as :
 > Block Quotes!
 
@@ -40,7 +42,7 @@ My fav. | Meh. | Great Car as well
         - That look like this.
 
 
-1. And there are numberered lists too.
+1. And there are numbered lists too.
 1. But the list goes on...
 1. Without changing the number
 1. It counts by itself!
