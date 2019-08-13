@@ -1,55 +1,58 @@
-const placeholder = 
-`# Welcome to my React Markdown Previewer!
+const placeholder = `# Welcome to my Markdown Previewer!
 
-## This is a sub-heading...
-### And here's some other cool stuff:
+## This is one of my very first projects using React xD
+### This is designed to take text written on the left and render it on the right.
+
+It can interpret text as **bold**... 
+Or _italic_.
+Or... even **_both!_**
+It can also ~~strikethrough~~.
   
-Heres some code, \`<inline style>\`, between 2 backticks.
+It will create line breaks when you press enter.
+
+It turns code, \`<like this>\`, into this 
 
 \`\`\`
-// this is multi-line code:
+// It can also handle multiple lines at once
 
-function anotherExample(firstLine, lastLine) {
-  if (firstLine == '\`\`\`' && lastLine == '\`\`\`') {
-    return multiLineCode;
-  }
+const exampleFn = (fun, games) => {
+  if (fun && games) {
+    return \`You lost an eye\`;
+  } else return \`It's all fun and games until someone loses an eye!\`
 }
 \`\`\`
-  
-You can also make text **bold**... whoa!
-Or _italic_.
-Or... wait for it... **_both!_**
-And feel free to go crazy ~~crossing stuff out~~.
 
-The coolest part is probably the toolbar, so go ahead and check that out. There are libraries out there that embed pre-coded toolbards like [SimpleMDE](https://simplemde.com/), but I decided to try to undertake the challenge myself, so this is definitely not perfect (some scrolling issues), but for the most part it works.
+I really enjoyed making this project and I hope you enjoyed checking it out. There are still more features I want to add like a toolbar from [SimpleMDE](https://simplemde.com/), but I haven't gotten around to it just yet.
 
-There's also [links](https://www.freecodecamp.com/no-stack-dub-sack), and
+It will also interpret a few more things I am supposed to type about to pass the tests such as :
 > Block Quotes!
 
-And if you want to get really crazy, even tables:
+And even Tables!
 
-Wild Header | Crazy Header | Another Header?
+Eagle Talon | Plymouth Laser | Mitsubishi Eclipse
 ------------ | ------------- | ------------- 
-Your content can | be here, and it | can be here....
-And here. | Okay. | I think we get it.
+1990 - 1999 | 1990 - 1994 | 1990 - 2018
+My fav. | Meh. | Great Car as well
 
 - And of course there are lists.
   - Some are bulleted.
-     - With differnt indentation levels.
+     - With different indentation levels.
         - That look like this.
 
 
-1. And there are numbererd lists too.
-1. The tool bar keeps adding 1s.
+1. And there are numberered lists too.
 1. But the list goes on...
+1. Without changing the number
+1. It counts by itself!
+
 - Even if you use dashes or asterisks.
 * And last but not least, let's not forget embedded images:
+* Plus it's cool to watch the react logo spin like a dj spinning records.
 
-![React Logo w/ Text](https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png)
+![React Logo](https://cdn4.iconfinder.com/data/icons/logos-3/600/React.js_logo-512.png)
 
-Well, that's it! Thanks for visiting my project. The code is in desperate need of a refactor, so maybe I will improve later and add additional functionality like syntax highlighting and fix some of the bugs. For this first round, I was just exploring these techniques and focusing on getting things working. 
+This is all for now. Thanks again for checking this out!
 
-Feel free to play around and leave some comments if you have any thoughts!
 `
 
 export default placeholder;
