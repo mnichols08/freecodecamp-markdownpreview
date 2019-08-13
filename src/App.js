@@ -15,16 +15,9 @@ const App = createReactClass({
     }
   },
 
-  doChange(e) {
+  onChange(e) {
     this.setState({
-      markdown: e,
-      lastClicked: '',
-    });
-  },
-
-  handleChange(e) {
-    this.setState({
-      markdown: e.target.value,
+      markdown: typeof e === 'string' ? e: e.target.value,
       lastClicked: '',
     });
   },
@@ -33,7 +26,7 @@ const App = createReactClass({
     return (
         <SplitPane split="vertical" size="50%">
           <div className="editor-pane">
-          <Editor markdown={this.state.markdown} onChange={this.handleChange} doChange={this.doChange} />
+          <Editor markdown={this.state.markdown} onChange={this.onChange} />
           </div>
           <div className="view-pane">
           <Preview markdown={this.state.markdown}/>
