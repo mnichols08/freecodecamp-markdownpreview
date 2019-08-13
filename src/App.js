@@ -1,43 +1,53 @@
-/* Markdown Preview App
-    Blog Generator() (Return a prompt that might spawn creativity)
-    
-*/
-import React, { Component } from 'react';
+import React from 'react';
+import './App.scss';
+import SV from './components/StoreVariables';
+import Header from './components/Header/Header.component';
 import SplitPane from 'react-split-pane';
-import Editor from './editor';
-import ReactMarkdown from 'react-markdown';
-import './App.css';
+import createReactClass from 'create-react-class';
+import Preview from './components/Preview/Preview.component';
+import Editor from './components/Editor/Editor.component';
+import placeholder from './components/placeholder'
 
-class App extends Component {
-  constructor(props){
-    super(props);
-    this.state = {
-      markdownSrc: '# Hello World',
-      splitPaneSize: "50%"
+const App = createReactClass({
+
+  getInitialState() {
+    return {
+      markdown: placeholder,
+      lastClicked: '',
     }
-    this.onMarkdownChange = this.onMarkdownChange.bind(this);
-  }
+  },
 
-  onMarkdownChange(md) {
+  doChange(e) {
     this.setState({
-      markDownSrc: md
+      markdown: e,
+      lastClicked: '',
     });
-  }
-  render() {
-  return (
-    <div className="App">
-      <SplitPane split="vertical" defaultSize="50%">
-        <div className="editor-pane">
-        <Editor className="editor" value={this.state.markdownSrc} onChange={this.onMarkdownChange} elementId="editor"/>
-        </div>
-        <div className="view-pane">
-          <ReactMarkdown className="result" source={this.state.markDownSrc} elementId="preview"/>
-        </div>
-      </SplitPane>
-    </div>
-  );
-  }
-}
+    SV.save('style', '');
+  },
 
+  handleChange(e) {
+    this.setState({
+      markdown: e.target.value,
+      lastClicked: '',
+    });
+    SV.save('style', '');
+  },
+    
+  render() {
+    return (
+      <>
+      <Header />
+        <SplitPane split="vertical" size="50%">
+          <div className="editor-pane">
+          <Editor markdown={this.state.markdown} onChange={this.handleChange} doChange={this.doChange} />
+          </div>
+          <div className="view-pane">
+          <Preview markdown={this.state.markdown}/>
+          </div>
+        </SplitPane>
+        </>
+    )
+  }
+});
 
 export default App;

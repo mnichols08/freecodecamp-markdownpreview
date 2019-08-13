@@ -1,0 +1,17 @@
+#editor.hide{
+    display:none;
+}
+.editor-pane {
+    height: 100%;
+  }
+  
+  .CodeMirror {
+    height: 100vh !important;
+    padding-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .ReactCodeMirror {
+    height: 100%;
+  }
+  
