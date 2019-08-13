@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.scss';
 import SV from './components/StoreVariables';
-import Header from './components/Header/Header.component';
 import SplitPane from 'react-split-pane';
 import createReactClass from 'create-react-class';
 import Preview from './components/Preview/Preview.component';
@@ -35,8 +34,6 @@ const App = createReactClass({
     
   render() {
     return (
-      <>
-      <Header />
         <SplitPane split="vertical" size="50%">
           <div className="editor-pane">
           <Editor markdown={this.state.markdown} onChange={this.handleChange} doChange={this.doChange} />
@@ -45,7 +42,6 @@ const App = createReactClass({
           <Preview markdown={this.state.markdown}/>
           </div>
         </SplitPane>
-        </>
     )
   }
 });
